@@ -14,9 +14,10 @@ module.exports = {
         test: /\.js$/,
         use: {
           loader: 'force-strict-loader',
-          sourceMap: true
+          options: {
+            sourceMap: true
+          }
         }
-
       }
     ]
   }
