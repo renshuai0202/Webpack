@@ -1,3 +1,3 @@
-import addContent from './add-content.js';
-document.write('My first Webpack app.<br />');
-addContent();
+import { name, say } from './add-content.js';
+console.log(name);
+console.log(say());

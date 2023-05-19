@@ -10,12 +10,22 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /\.js$/,
+      //   use: {
+      //     loader: 'force-strict-loader',
+      //     options: {
+      //       sourceMap: true
+      //     }
+      //   }
+      // }
       {
-        test: /\.js$/,
+        test: /\.js$/, // 使用Babel处理所有的JS文件
+        exclude: /node_modules/, // 排除node_modules文件夹
         use: {
-          loader: 'force-strict-loader',
+          loader: 'babel-loader', // 使用Babel Loader
           options: {
-            sourceMap: true
+            presets: ['@babel/preset-env'] // 使用@babel/preset-env预设
           }
         }
       }
