@@ -22,3 +22,7 @@ module: {
 ```
 use：提取样式前，使用何loader处理.css
 callback：当前插件无法处理样式时，使用何loader处理
+
+打包流程：
+1. 检查配置项
+2. 加载缓存
